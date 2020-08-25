@@ -1,6 +1,8 @@
 import axios from 'axios';
 import uploadImageActionTypes from './uploadImage.actionTypes';
 
+const ImgbbAPIKey = process.env.REACT_APP_IMGBBKEY;
+
 const uploadImageStart = () => ({
   type: uploadImageActionTypes.UPLOAD_IMAGE_START,
 });
@@ -21,7 +23,7 @@ export const setImageDimensions = (width, height) => ({
 export const uploadImage = (imageFile) => {
   return async (dispatch) => {
     dispatch(uploadImageStart());
-    const imgbbKey = '2035fa0a39a64b295592dc13bf0e455d';
+    const imgbbKey = ImgbbAPIKey;
     try {
       const file = imageFile;
       const fileName = file.name;

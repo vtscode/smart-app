@@ -2,10 +2,10 @@ import clarifaiModelsActionTypes from './clarifaiModels.actionTypes';
 import Clarifai from 'clarifai';
 import { setImageDimensions } from '../uploadImage/uploadImage.actions';
 
+const ClarifaiAPIKey = process.env.REACT_APP_CLARIFAIKEY_TWO;
+
 const app = new Clarifai.App({
-  // apiKey: '8a30a594afae4ebcb9d0bb35103a89a4',  // yg lama
-  apiKey: 'b3aef77b71f6459194e7c52bb7abd863', // yang baru
-  // apiKey: "713ab17e1d3a4fc3b1cab6000235afea", //riventus API key
+  apiKey: ClarifaiAPIKey, // yang baru
 });
 
 const predictionStart = () => ({
