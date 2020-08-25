@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImageSearchForm.css";
+import "./ImageSearchForm.scss";
 
 const ImageSearchForm = ({ onInputChange, onSubmit }) => {
   return (

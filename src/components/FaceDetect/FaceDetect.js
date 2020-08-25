@@ -1,5 +1,5 @@
 import React from "react";
-import "./FaceDetect.css";
+import "./FaceDetect.scss";
 
 const FaceDetect = ({ imageUrl, box }) => {
   return (

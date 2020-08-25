@@ -1,6 +1,9 @@
+$color-box-1:#149df2; 
+$color-box-2:#42c44a;
+
 .bounding-box {
   position: absolute;
-  box-shadow: 0 0 0 3px #149df2 inset;
+  box-shadow: 0 0 0 3px $color-box-2 inset;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -10,7 +13,7 @@
   cursor: pointer;
 
   .box-label {
-    background: #149df2;
+    background: $color-box-2;
     color: white;
     height: 0.9rem;
     font-size: 0.7rem;

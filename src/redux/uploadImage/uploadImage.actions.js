@@ -23,7 +23,6 @@ export const setImageDimensions = (width, height) => ({
 export const uploadImage = (imageFile) => {
   return async (dispatch) => {
     dispatch(uploadImageStart());
-    const imgbbKey = ImgbbAPIKey;
     try {
       const file = imageFile;
       const fileName = file.name;
@@ -40,7 +39,7 @@ export const uploadImage = (imageFile) => {
         const bodyFormData = new FormData();
         bodyFormData.append('image', encoded);
         const response = await axios.post(
-          `https://api.imgbb.com/1/upload?key=${imgbbKey}&name=${extFreeName}`,
+          `https://api.imgbb.com/1/upload?key=${ImgbbAPIKey}&name=${extFreeName}`,
           bodyFormData
         );
         const imageUrl = response.data.data.url;

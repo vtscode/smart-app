@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import { connect } from 'react-redux';
 import Particles from 'react-particles-js';
-import AnimatedNavbar from './components/AnimatedNavbar/AnimatedNavbar';
 import Alert from './components/Alert/Alert';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import ModelsPage from './pages/ModelsPage/ModelsPage';
 
-import { connect } from 'react-redux';
+import AnimatedNavbar from './components/AnimatedNavbar/AnimatedNavbar';
 import { setImageDimensions } from './redux/uploadImage/uploadImage.actions';
 
 const particlesOptions = {
