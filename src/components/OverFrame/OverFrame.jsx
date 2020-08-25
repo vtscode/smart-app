@@ -20,7 +20,7 @@ const OverFrame = ({ response, location, isLoading }) => {
       modelName = 'Face Recognition';
       break;
     case 'apparel':
-      modelName = 'Apparel Detctor';
+      modelName = 'Apparel Detector';
       break;
     default:
       break;

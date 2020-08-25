@@ -3,7 +3,7 @@ $color-box-2:#42c44a;
 
 .bounding-box {
   position: absolute;
-  box-shadow: 0 0 0 3px $color-box-2 inset;
+  box-shadow: 0 0 0 .1875rem $color-box-2 inset;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
