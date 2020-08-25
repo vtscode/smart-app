@@ -1,0 +1,34 @@
+.home-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .home-title {
+    text-transform: uppercase;
+    color: var(--bg-primary);
+    text-shadow: 1px 1px 1px var(--text-primary);
+    margin: 0;
+    font-size: 3rem;
+  }
+  .home-subtitle {
+    text-shadow: 1px 1px 1px var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 1.7rem;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-page {
+    .home-title {
+      font-size: 2.5rem;
+    }
+    .home-subtitle {
+      font-size: 1.6rem;
+    }
+  }
+}

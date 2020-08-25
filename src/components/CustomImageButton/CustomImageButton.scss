@@ -1,0 +1,64 @@
+.custom-image-button {
+  height: 3rem;
+  width: 70%;
+  margin-top: auto;
+  z-index: 1;
+
+  .image-input {
+    height: 100%;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+    background: #009cff;
+    font-family: sofia-pro, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    .icon {
+      padding-right: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #004eeb;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .custom-image-button {
+    height: 2.4rem;
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .custom-image-button {
+    height: 2.2rem;
+    width: 45%;
+
+    .image-input {
+      font-size: 0.6rem;
+
+      .icon {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .custom-image-button {
+    width: 65%;
+  }
+}

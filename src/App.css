@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --light-blue: #43aeae;
+  --transition-speed: 600ms;
+  --fade-blue: #1a6dff;
+  --fade-pink: #c822ff;
+  --danger-color: #dc3545;
+  --success-color: #17a2b8;
+  --purple-1:#8e96bb;
+  --purple-2:#d9d6e5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  color: black;
+  background: linear-gradient(
+    89deg,
+    var(--fade-blue) 0%,
+    var(--fade-pink) 100%
+  );
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar {
+  width: 0.25rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #43aeae;
+}
+
+@import "~antd/dist/antd.css";
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-content {
+  margin-left: 5rem;
+  padding: 1rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px) {
+  .app-content {
+    margin-left: 0;
   }
 }

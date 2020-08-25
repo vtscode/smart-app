@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Particles from 'react-particles-js';
+import AnimatedNavbar from './components/AnimatedNavbar/AnimatedNavbar';
+import Alert from './components/Alert/Alert';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage';
+import ModelsPage from './pages/ModelsPage/ModelsPage';
 
-function App() {
+import { connect } from 'react-redux';
+import { setImageDimensions } from './redux/uploadImage/uploadImage.actions';
+
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+  },
+};
+
+function App({ setImageDimensions }) {
+  const updateImageSize = () => {
+    const img = document.getElementById('inputImage');
+    if (img) {
+      setImageDimensions(img.clientWidth, img.clientHeight);
+    }
+  };
+  window.addEventListener('resize', updateImageSize);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {<Particles className='particles' params={particlesOptions} />}
+      <AnimatedNavbar />
+      <div className='app-content'>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/models' component={ModelsPage} />
+        </Switch>
+        <Alert />
+      </div>
     </div>
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setImageDimensions: (width, height) =>
+    dispatch(setImageDimensions(width, height)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
