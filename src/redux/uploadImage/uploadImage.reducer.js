@@ -1,7 +1,7 @@
 import uploadImageActionTypes from './uploadImage.actionTypes';
 
 const INITIAL_STATE = {
-  imageUrl: 'https://i.ibb.co/QpY5msy/IMG-20180617-WA0007.jpg',
+  imageUrl: 'https://i.ibb.co/wcGqxC4/facegorup.jpg',
   isImageLoading: false,
   imageDimensions: { width: 519, height: 346 },
   error: undefined,
